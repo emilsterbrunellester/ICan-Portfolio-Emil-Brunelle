@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0; /* Ensures no default margin on the body */
+  padding: 0; /* Ensures no default padding on the body */
+  color: #333;
+  line-height: 1.6;
+  position: relative; /* For the pseudo-element */
+  z-index: 0; /* Keeps content above the pseudo-element */
+  background: none; /* Remove default background color */
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width of the viewport */
+  height: 100vh; /* Full height of the viewport */
+  background: url('matrix.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: blur(8px); /* Adds the blur effect */
+  z-index: -1; /* Places the pseudo-element behind the content */
+  opacity: 0.9; /* Optional: Slight transparency */
+}
+  
+  header {
+    background-color: #319831;
+    color: #000000;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  nav {
+    margin-top: 0.5rem;
+  }
+  
+  nav a {
+    color: #000000;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.3rem 0.5rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #000000;
+    border-radius: 4px;
+    color: #319831;
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #000000;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #319831;
+  }
+  
+  section p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #319831;
+  }
+  
+  /* Projects Section */
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .project-card {
+    flex: 1 1 calc(30% - 1rem);
+    border: 1px solid #319831;
+    border-radius: 8px;
+    background: #319831;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .project-card h3 {
+    margin: 0.5rem 0;
+    color: #000000;
+  }
+  
+  .project-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+    color: #000000;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #6a0dad;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+  }
+  
+  footer a {
+    color: #ffdd57;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-card {
+      flex: 1 1 100%;
+    }
+  
+    nav a {
+      font-size: 0.9rem;
+    }
+  }
+  
